@@ -1,0 +1,15 @@
+.array{
+    display: flex;
+    flex-direction: column;
+    /* column-count: 5; */
+    text-align: center;
+    align-items: center;
+
+
+}
+pre{
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    align-items: center;
+}

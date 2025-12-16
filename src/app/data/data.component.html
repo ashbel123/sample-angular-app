@@ -1,0 +1,50 @@
+
+<div class="container" style="background-color: azure">
+<h3>data works!</h3>
+<h3>Product Information</h3>
+<h3>Product Id {{productId}}</h3>
+<h3>Name {{productName}}</h3>
+<h3>Description {{productDescription}}</h3>
+<h3>Price {{price}}</h3>
+<h3>Quantity {{qty}}</h3>
+<h3>In stock {{isAvailable}}</h3>
+<h3>Shipping <span [style.background-color]="shipping">&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+<h3>can order{{canOrder}}</h3>
+<h3>Enter qty <input type="text" name="qty" (change)="displayOrderedQty()" [(ngModel)]="orderedQty"/>
+</h3>
+<input type="button" value="order"  [disabled]="canOrder" (click) ="placeOrder()"/>
+
+<input type="button" value="Add" (click)="addOrderedQtry()"/>
+<input type="text" [value]="presentQty" />
+<input type="button" value="Remove"  
+(click)="substractOrderedQty()"
+/>
+
+<hr size="4" color="blue">
+<div *ngIf="isMember; else nonmember">
+    <h4>Welcome member you can avail the following coupons</h4>
+</div>
+
+<ng-template #nonmember>
+    <h4>Become a member and avail the following benefits</h4>
+    <h5>
+        <ul>
+            <li>10% discount on all electronics</li>
+            <li>Free Annual maintainence for 3 years</li>
+            <li>15% discount on all home services</li>
+        </ul>
+    </h5>
+</ng-template>
+<hr size="3" color="red"/>
+
+<div *ngFor="let product of products" class="array">
+       <pre style="background-color: aqua; color: black;">
+           Produt Brand: {{product.brand}}
+           Product Description: {{product.description}}
+           Product Price: ₹ {{product.price}}
+           Produt Quantity: {{product.qty}}
+        </pre>
+
+</div>
+</div>
+    
