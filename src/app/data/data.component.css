@@ -1,18 +1,4 @@
-/* .array{
-    display: flex;
-    flex-direction: column;
-    column-count: 5; 
-    text-align: center;
-    align-items: center;
 
-
-} */
-/* pre{
-    border-radius: 10px;
-    text-align: center;
-    padding-top: 10px;
-    align-items: center;
-} */
 /* Container for products (cards) */
 .card-container {
     display: flex;
@@ -52,6 +38,14 @@
     /* white-space: pre-wrap; */
     /* word-wrap: break-word; */
   }
+
+  .card .product-brand{
+    font-size: 18px;
+  }
+  .card .product-description{
+
+    font-size: 15px;
+  }
   
   /* Product price styling */
   .card .product-price-qty {
@@ -59,7 +53,7 @@
     /* text-align: justify */
      justify-content: space-between;
     /* align-items: ; */
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
     margin-top: 10px;
   }
@@ -70,4 +64,60 @@
   .card .product-qty{
     color: blue;
   }
+
+  .card .add-button{
+     
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .card input{
+
+    all: unset;
+    background-color: rgb(206, 71, 233);
+    color: white;
+    width: 50px;
+    height: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    /* margin-top:  8px; */
+  }
   
+
+  .card input:hover{
+    background-color: rgb(139, 17, 163);
+  }
+
+  .buttons-array .added-qty-button{
+
+    all: unset;
+     text-align: center;
+     /* display: flex;
+     justify-content: center; */
+     border-radius: 4px;
+     width: 40px;
+     height:20px;
+     color: black;
+     background-color: lightgray;
+  }
+  .buttons-array .plus-minus-button{
+    all: unset;
+    text-align: center;
+    border-radius: 4px;
+    width: 30px;
+    height: 20px;
+    background-color:  rgb(206, 71, 233);  
+  }
+  .buttons-array{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top:  15px;
+  }

@@ -14,11 +14,14 @@
 </h3>
 <input type="button" value="order"  [disabled]="canOrder" (click) ="placeOrder()"/>
 
-<input type="button" value="Add" (click)="addOrderedQtry()"/>
-<input type="text" [value]="presentQty" />
-<input type="button" value="Remove"  
-(click)="substractOrderedQty()"
-/>
+<div class="buttons">
+    
+    <input type="button" value="+" (click)="addOrderedQtry()" class="plus-minus-button"/>
+    <input type="button" [value]="presentQty" class="added-qty-button" disabled="true"/>
+    <input type="button" value="-"  class="plus-minus-button"
+    (click)="substractOrderedQty()"
+    />
+</div>
 
 <hr size="4" color="blue">
 <div *ngIf="isMember; else nonmember">
@@ -60,7 +63,25 @@
                     In Stock: {{product.qty}}
                 </span>
             </div>
+             
+            <div class="buttons">
 
+                <div class="buttons-array">
+                    <input type="button" value="+" (click)="addOrderedQtry()" class="plus-minus-button"/>
+                    <input type="button" [value]="presentQty" class="added-qty-button" disabled="true"/>
+                    <input type="button" value="-"  class="plus-minus-button"
+                    (click)="substractOrderedQty()"
+                    />
+                </div>
+                <div class="add-button">
+                    <input type="button" value="Add" (click)="addOrderedQtry()"/>
+                </div>
+            </div>
+
+            <!-- <input type="text" [value]="presentQty" />
+            <input type="button" value="Remove"  
+            (click)="substractOrderedQty()"
+            /> -->
         <!-- </pre> -->
         
         
