@@ -37,14 +37,34 @@
 </ng-template>
 <hr size="3" color="red"/>
 
-<div *ngFor="let product of products" class="array">
-       <pre style="background-color: aqua; color: black;">
-           Produt Brand: {{product.brand}}
-           Product Description: {{product.description}}
-           Product Price: ₹ {{product.price}}
-           Produt Quantity: {{product.qty}}
-        </pre>
+<div class="card-container">
 
+    <div *ngFor="let product of products" class="card">
+        <!-- <pre style="background-color: aqua; color: black;"> -->
+            <div class="product-brand">
+
+                 Brand: {{product.brand}}
+                
+            </div>
+            <div class="product-description">
+                 Description: {{product.description}}
+                
+            </div>
+            <div class="product-price-qty">
+                <span class="product-price">
+
+                    Price: ₹ {{product.price}}
+                </span>
+                <span class="product-qty">
+
+                    In Stock: {{product.qty}}
+                </span>
+            </div>
+
+        <!-- </pre> -->
+        
+        
+    </div>
 </div>
 </div>
     
