@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { Data2Component } from './data2/data2.component';
 import { AsyncComponent } from './async/async.component';
 import { ApiclientComponent } from './apiclient/apiclient.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ApiclientComponent } from './apiclient/apiclient.component';
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(), provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
