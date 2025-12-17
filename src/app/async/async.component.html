@@ -1,0 +1,18 @@
+<div>
+    <button (click)="publish()">Say Hello!</button>
+    <input type="text" [value]="message">
+    {{message}}
+</div>
+
+<div>
+    <h3>Scores: </h3>
+    <button (click)="publish2()">Fetch Scores</button>
+    <input type="text" [value]="scores">
+    <div *ngFor="let score of scores">
+        <div>{{score}}</div>
+    </div>
+    {{message}}
+</div>
+
+
+<p>async works!</p>
