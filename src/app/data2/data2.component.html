@@ -1,0 +1,75 @@
+<p>DAta from DataService Example</p>
+
+
+<div class="card-container">
+
+    <div *ngFor="let product of products" class="card" style="background-color: rgb(132, 132, 219);">
+        <!-- <pre style="background-color: aqua; color: black;"> -->
+            <div style="background-color: rgb(240, 228, 118);">
+
+                <div class="product-brand">
+                    
+                 Brand: {{product.brand}}
+                
+                </div>
+                <div class="product-description">
+                    Description: {{product.description}}
+                    
+                </div>
+                <div class="product-price-qty">
+                    <span class="product-price">
+                        
+                        Price: ₹ {{product.price}}
+                    </span>
+                    <span class="product-qty">
+                        
+                        In Stock: {{product.qty}}
+                    </span>
+                </div>
+            </div>
+            <hr color="black">
+            
+            <!-- <div class="buttons">
+
+                <div class="buttons-array">
+                    <input type="button" value="+" (click)="addOrderedQtry()" class="plus-minus-button"/>
+                    <input type="button" [value]="presentQty" class="added-qty-button" disabled="true"/>
+                    <input type="button" value="-"  class="plus-minus-button"
+                    (click)="substractOrderedQty()"
+                    />
+                </div>
+                <div class="add-button">
+                    <input type="button" value="Add" (click)="addOrderedQtry()"/>
+                </div>
+            </div> -->
+            
+            <!-- <input type="text" [value]="presentQty" />
+            <input type="button" value="Remove"  
+            (click)="substractOrderedQty()"
+            /> -->
+        <!-- </pre> -->
+        
+        
+    </div>
+</div>
+<div>
+    Select filter type:
+    <!-- <input type="select">
+    <li>
+        <ul>Id</ul>
+        <ul
+    </li> -->
+    
+    <input type="text"  [(ngModel)]="tempProductId">
+    <button (click)="getProductById()">search</button>
+</div>
+  
+<div>
+    <h5>
+    Your Searched element appears here:
+    </h5> {{product.productId}}
+    {{product.description}}
+    {{product.brand}}
+    {{product.price}}
+    
+</div>

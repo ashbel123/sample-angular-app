@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataComponent } from './data/data.component';
 import { FormsModule } from '@angular/forms';
+import { Data2Component } from './data2/data2.component';
+import { AsyncComponent } from './async/async.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataComponent
+    DataComponent,
+    Data2Component,
+    AsyncComponent
   ],
   imports: [
     BrowserModule,
