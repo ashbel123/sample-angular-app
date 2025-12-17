@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AsyncComponent {
   message: any;
   scores: any;
-   testObservervable = new Observable((observer)=>{
+   testObservable = new Observable((observer)=>{
     setTimeout(()=>{observer.next("Hello world!")},1000);
     setTimeout(()=>{observer.next("Mom Says Hello!")},2000);
     setTimeout(()=>{observer.next("Dad Says Hello !")},3000);
@@ -18,7 +18,7 @@ export class AsyncComponent {
     setTimeout(()=>{observer.next("Aunt Says Hello!")},6000);
    });
 
-   testObservervable2 = new Observable((observer)=>{
+   testObservable2 = new Observable((observer)=>{
     // setTimeout(()=>{observer.next("Hello world!")},1000);
     // setTimeout(()=>{observer.next("Mom Says Hello!")},2000);
     // setTimeout(()=>{observer.next("Dad Says Hello !")},3000);
@@ -28,10 +28,14 @@ export class AsyncComponent {
     observer.next([20,23,24,25,26,27,99,78]);
    });
 
+   testObservable3= new Observable((observer)=>{
+     throw new Error("cannot proceed");
+   })
+
    publish(): any{
-    // this.testObservervable.subscribe(callback function);
-        // this.testObservervable.subscribe(function myfun(){});
-    this.testObservervable.subscribe((data)=>{
+    // this.testObservable.subscribe(callback function);
+        // this.testObservable.subscribe(function myfun(){});
+    this.testObservable.subscribe((data)=>{
 
       console.log(data);
       this.message=data;
@@ -40,12 +44,20 @@ export class AsyncComponent {
 
 
    publish2(): any{
-      this.testObservervable.subscribe((p)=>{
+      this.testObservable.subscribe((p)=>{
         console.log(p);
       })
-      this.testObservervable2.subscribe((scores)=>{
+      this.testObservable2.subscribe((scores)=>{
         this.scores=scores;
       })
+   }
+
+   publish3(): any{
+     this.testObservable3.subscribe({
+
+       next: (scores) =>{ console.log("got data response")},
+       error: (err) => {console.log('got error response: ',err)}
+     })
    }
   
 }

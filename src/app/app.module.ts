@@ -7,13 +7,15 @@ import { DataComponent } from './data/data.component';
 import { FormsModule } from '@angular/forms';
 import { Data2Component } from './data2/data2.component';
 import { AsyncComponent } from './async/async.component';
+import { ApiclientComponent } from './apiclient/apiclient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataComponent,
     Data2Component,
-    AsyncComponent
+    AsyncComponent,
+    ApiclientComponent
   ],
   imports: [
     BrowserModule,
