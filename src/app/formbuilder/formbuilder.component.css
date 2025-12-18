@@ -1,0 +1,99 @@
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Heading */
+  h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  /* Form layout */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Label and input styling */
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+  }
+  
+  /* Grouped sections */
+  div[formGroupName],
+  div[formArrayName] {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #f9f9f9;
+  }
+  
+  div[formGroupName] label,
+  div[formArrayName] label {
+    margin-top: 0.5rem;
+  }
+  
+  /* Buttons */
+  button {
+    background: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #16a085;
+  }
+  
+  button[disabled] {
+    background: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    input[type="text"] {
+      font-size: 0.85rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  }
+
+  
