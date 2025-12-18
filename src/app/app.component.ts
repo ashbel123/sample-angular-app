@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+// import { Router } from 'express';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,29 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  //  title='routing'
+  constructor(private router: Router){}
+
+  renderForm(form: string){
+    this.router.navigate([form]);
+  }
+
+  renderData(data: string){
+    this.router.navigate([data]);
+  }
+  renderBoot(boot: string){
+    this.router.navigate([boot]);
+  }
+  
+  renderRegister(register: string)
+{
+  this.router.navigate([register]);
+}
+
+
+
+
   title = 'Ashbel Raj';
   subject='intro to my class';
 

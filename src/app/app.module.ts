@@ -12,6 +12,8 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { FormBuilder } from '@angular/forms';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { BootComponent } from './boot/boot.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
     AsyncComponent,
     ApiclientComponent,
     FormComponent,
-    FormbuilderComponent
+    FormbuilderComponent,
+    ReactiveComponent,
+    BootComponent
   ],
   imports: [
     BrowserModule,

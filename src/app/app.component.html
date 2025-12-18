@@ -1,7 +1,24 @@
 <!-- <app-apiclient></app-apiclient> -->
+
+<h3><a [routerLink]="['/data']">Data</a></h3>
+<h3><a [routerLink]="['/form']">Form</a></h3>
+<h3><a [routerLink]="['/boot']">Boot</a></h3>
+<hr>
+<h3><button (click)="renderForm('/form')" type="button" class="btn btn-outline-success">Form</button>> </h3>
+
+<h3><button (click)="renderForm('/data')" type="button" class="btn btn-outline-warning">Data</button>> </h3>
+
+<h3><button (click)="renderForm('/boot')" type="button" class="btn btn-outline-dark">Boot</button>> </h3>
+
+
+<router-outlet></router-outlet>
+
+ <!-- <app-boot></app-boot>
+ <app-reactive></app-reactive>
+ <app-formbuilder></app-formbuilder>
  <app-form></app-form>
 <app-apiclient> </app-apiclient>
-<app-async></app-async>
+<app-async></app-async> -->
 <!-- <app-data></app-data> -->
 <!-- <app-data2></app-data2> -->
 <!-- <app-data></app-data> -->
