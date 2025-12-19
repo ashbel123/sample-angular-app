@@ -1,6 +1,28 @@
 <!-- <app-apiclient></app-apiclient> -->
+ <div style="background-color: rgb(105, 105, 223);">
 
-<h3><a [routerLink]="['/data']">Data</a></h3>
+ <h2>Parent to Component property injection</h2>
+<h3>Parent component:</h3>
+<input type="text" [(ngModel)]="searchText" placeholder="search by brand">
+<button (click)="find()">Search</button>
+<app-child [product]="productFound"></app-child>
+
+</div>
+
+<div style="background-color: rgb(235, 139, 139);">
+
+
+<!-- <app-child ></app-child> -->
+<h4>Parent items</h4>
+ 
+ <li *ngFor="let item of parentItems">
+    {{item}}
+ </li>
+ <app-child2parent (childEvent)="onChildEvent($event)"></app-child2parent>
+ 
+</div>
+<!-- <child-app></child-app> -->
+<!-- <h3><a [routerLink]="['/data']">Data</a></h3>
 <h3><a [routerLink]="['/form']">Form</a></h3>
 <h3><a [routerLink]="['/boot']">Boot</a></h3>
 <hr>
@@ -11,7 +33,7 @@
 <h3><button (click)="renderForm('/boot')" type="button" class="btn btn-outline-dark">Boot</button>> </h3>
 
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
  <!-- <app-boot></app-boot>
  <app-reactive></app-reactive>

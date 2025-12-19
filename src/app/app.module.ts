@@ -14,6 +14,8 @@ import { FormBuilder } from '@angular/forms';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { BootComponent } from './boot/boot.component';
+import { ChildComponent } from './child/child.component';
+import { Child2parentComponent } from './child2parent/child2parent.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BootComponent } from './boot/boot.component';
     FormComponent,
     FormbuilderComponent,
     ReactiveComponent,
-    BootComponent
+    BootComponent,
+    ChildComponent,
+    Child2parentComponent
   ],
   imports: [
     BrowserModule,

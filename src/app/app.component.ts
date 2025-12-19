@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '../Product';
+import { SearchService } from './search.service';
 // import { Router } from 'express';
 
 @Component({
@@ -11,9 +13,27 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  searchText: string="";
+  // searchService : SearchService | undefined; ( we cant add here)
+  productFound: Product= new Product();
+  constructor(private router: Router, private searchService: SearchService){
+    // this.productFound=searchService.getProductByBrand(this.searchText);
+  }
 
+  
+  parentItems:string[]=[]; // ['item1', 'item2']
+  onChildEvent(newItem: string){
+    this.parentItems.push(newItem);
+  }
+   products: Product[]=[];
+
+
+  find(): void {
+    console.log(this.searchText);
+    this.productFound=this.searchService.getProductByBrand(this.searchText);
+    console.log("found product here in find methods is"+this.productFound);
+  }
   //  title='routing'
-  constructor(private router: Router){}
 
   renderForm(form: string){
     this.router.navigate([form]);
